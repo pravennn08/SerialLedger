@@ -1,14 +1,28 @@
-# SerialLedger board library — v0.1 beta 1
+<div align="center">
+ <h1>SerialLedger board library(v0.1 beta 1)</h1>
 
 Portable, allocation-free C99 telemetry transport and C++11 typed reading helpers.
 Arduino, ESP32, and other boards send newline-delimited JSON; the separately installed
 Python companion records CSV and exports Excel workbooks on your computer.
 
+[![GitHub version](https://img.shields.io/github/v/tag/pravennn08/SerialLedger?include_prereleases&sort=semver)](https://github.com/pravennn08/SerialLedger/tags)
+![C](https://img.shields.io/badge/Baremetal-A8B9CC?logo=c&logoColor=black)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00878F?logo=arduino&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?logo=espressif&logoColor=white)
+[![CI](https://github.com/pravennn08/SerialLedger/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/pravennn08/SerialLedger/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-red)](./LICENSE.md)
+
+</div>
+
 ## Installation
 
-Arduino Library Manager and PlatformIO registry submissions are being prepared.
-Until they are accepted, use the ZIP installation below. The standalone board
-repository will be <https://github.com/pravennn08/SerialLedger>.
+The beta is published on [PlatformIO](https://registry.platformio.org/libraries/engrpraven08/SerialLedger).
+Arduino Library Manager registration was accepted in
+[PR #9367](https://github.com/arduino/library-registry/pull/9367).
+If the library has not appeared after refreshing the index, use the ZIP
+installation below while indexing completes. The board-library source is hosted at
+<https://github.com/pravennn08/SerialLedger>.
 
 In Arduino IDE, choose **Sketch > Include Library > Add .ZIP Library** and select
 the prepared `SerialLedger-0.1.0-beta.1.zip`. Open **File > Examples > SerialLedger >
@@ -23,7 +37,7 @@ After the library is listed in Arduino Library Manager, search for **SerialLedge
 by **Raven Magbanua**, install it, then open **File > Examples > SerialLedger >
 BasicTelemetry**.
 
-After PlatformIO registry publication, add this to your environment's `platformio.ini`:
+To install from PlatformIO, add this to your environment's `platformio.ini`:
 
 ```ini
 lib_deps =
@@ -82,4 +96,5 @@ defaults to 192 bytes; float formatting supports 0–6 decimal places and finite
 values with magnitude up to 1e9. There is no automatic reconnect or retransmission.
 
 MIT licensed; see [LICENSE.md](LICENSE.md).
+See [CHANGELOG.md](CHANGELOG.md) for board-library release history.
 Source, PC companion, and support: <https://github.com/pravennn08/serial-ledger>.

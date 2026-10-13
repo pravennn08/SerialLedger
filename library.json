@@ -36,6 +36,7 @@
       "library.properties",
       "library.json",
       "README.md",
+      "CHANGELOG.md",
       "LICENSE.md",
       "UPSTREAM.md"
     ]
