@@ -23,7 +23,7 @@ jobs:
           echo "181671ca174988f2601e1cdf2b40a552682db8eaa047de33117e67e70338b63e  /tmp/arduino-lint.tar.gz" | sha256sum --check
           mkdir -p /tmp/serialledger-lint
           tar -xzf /tmp/arduino-lint.tar.gz -C /tmp/serialledger-lint
-          /tmp/serialledger-lint/arduino-lint --project-type library --compliance specification --library-manager submit .
+          /tmp/serialledger-lint/arduino-lint --project-type library --compliance specification --library-manager submit "$GITHUB_WORKSPACE"
       - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
         with:
           version: "0.12.15"
